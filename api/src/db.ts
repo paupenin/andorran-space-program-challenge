@@ -1,4 +1,4 @@
-import { Item, ObjectId, Variant } from "./types";
+import { Item, ItemList, ObjectId } from "./types";
 
 /**
  * ATTENTION!
@@ -7,7 +7,7 @@ import { Item, ObjectId, Variant } from "./types";
  *
  * Do not modify this file.
  */
-let items: Record<ObjectId, Item> = {};
+let items: ItemList = {};
 
 // Add some production data to the database
 addProductionData();

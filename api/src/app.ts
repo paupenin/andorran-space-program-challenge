@@ -1,10 +1,16 @@
-import express, { Request, Response } from "express";
+import express, { NextFunction, Request, Response } from "express";
 import { Location, Variant, Item, ObjectId } from "./types";
 import db from "./db";
 
 const app = express();
 
 app.use(express.json());
+
+// Log every request
+app.use((req: Request, res: Response, next: NextFunction) => {
+  next();
+  console.log(`${req.method} ${req.path} - ${res.statusCode}`, req.body);
+});
 
 /**
  * Get the first available location in the warehouse

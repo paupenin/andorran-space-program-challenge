@@ -50,3 +50,20 @@ From now on, items with zero or negative `quantity` doesn't exists.
 We have to accept Radiation Shielding for our variants.
 
 1. When retrieving, creating or updating variants we must accept an optional `radiationShielding` as a number.
+
+**BONUS**
+
+1. Add `totalVariants` and `totalQuantity`to `GET /inventory`.
+
+### APP
+
+**Radiation Shielding**
+
+1. Add an input called "Youtuber's car". If the user introduces: `porsche`, `ferrari`, or `lamborgini` add `radiationShielding` as a number to the update request.
+
+**BONUS**
+
+1. Display `totalVariants` and `totalQuantity` in "List of Items" Section.
+2. Update the application `totalVariants` and `totalQuantity` when creating new variants or updating quantities.
+
+

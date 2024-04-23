@@ -15,3 +15,5 @@ export interface Item {
 }
 
 export type ObjectId = string;
+
+export type ItemList = Record<ObjectId, Item>;
