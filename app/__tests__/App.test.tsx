@@ -56,7 +56,6 @@ describe("App", () => {
   it("can calculate radiation for a variant", async () => {
     render(<App />);
     await waitFor(async () => {
-      // screen.getByText("nose-cone-123");
       const variantItem = screen.getByTestId("nose-cone-123-variant");
 
       const radiationButton =

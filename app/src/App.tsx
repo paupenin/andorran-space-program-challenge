@@ -33,7 +33,7 @@ function App(): React.JSX.Element {
     getInventoryItems().then((res) => {
       setItemsData(res.data);
     });
-  });
+  }, []);
 
   return (
     <SafeAreaView>
