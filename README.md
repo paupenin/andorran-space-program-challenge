@@ -36,17 +36,17 @@ If the mixture has more tobacco than alcohol the Radiation Shielding must be Lev
 
 - Do not modify Database data or connector, don't change `db.ts`.
 - All tests must pass, existing tests must not be changed.
-- Finish all items before doing BONUS.
+- Finish all tasks before doing BONUS.
 
 ## Tasks:
 
 ### API
 **Negative numbers**
 
-From now on, items with zero or negative `quantity` doesn't exists.
+From now on, variants with zero or negative `quantity` doesn't exists.
 
 1. They should not be returned in `GET /inventory` or `GET /inventory/:id`.
-2. Prevent adding new ones if zero or negative. When updating delete if zero or negative. We must still allow the import of negative quantities to remove items.
+2. When importing a variant, delete it if zero or negative quantity. We must still allow the import of negative quantities to remove items.
 3. When removing variants delete the variant for zero or negative quantities.
 
 **Radiation Shielding**

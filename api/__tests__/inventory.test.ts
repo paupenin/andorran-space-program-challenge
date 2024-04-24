@@ -34,6 +34,7 @@ describe('Inventory API', () => {
 
         expect(response.status).toBe(200);
         expect(response.body.name).toBe('Space Helmet');
+        expect(response.body.variants.length).toBe(3);
     });
 
     it('should return an error if the item is not found', async () => {

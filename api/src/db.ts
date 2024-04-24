@@ -94,7 +94,7 @@ function addProductionData() {
       },
       {
         serialNumber: "mountain-air-in-a-can",
-        quantity: 100,
+        quantity: -100,
         location: "LOC-14-15",
       },
     ],
