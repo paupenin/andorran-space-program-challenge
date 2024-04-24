@@ -75,4 +75,9 @@ We have to accept Radiation Shielding for our variants.
 1. Display `totalVariants` and `totalQuantity` in "List of Items" Section.
 2. Update the application `totalVariants` and `totalQuantity` when creating new variants or updating quantities.
 
+### SDK
+
+**Radiation Shielding**
+
+1. Update the Radiation Mesuring SDK to reduce radiation based on the Radiation Shielding. The Radiation shielding reduces radiation by 20 points for Level 1, 1/3 for Level 2, and 39% for Level 3.
 

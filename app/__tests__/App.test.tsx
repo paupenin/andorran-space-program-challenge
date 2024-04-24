@@ -1,5 +1,5 @@
-import "react-native";
 import React from "react";
+import { mockRadiationMeasuring } from "../src/NativeModules";
 import App from "../src/App";
 
 // Note: import explicitly to use the types shipped with jest.
@@ -12,9 +12,14 @@ import {
   screen,
   waitFor,
   fireEvent,
+  within,
 } from "@testing-library/react-native";
 
 describe("App", () => {
+  beforeAll(() => {
+    mockRadiationMeasuring();
+  });
+
   it("renders correctly", async () => {
     render(<App />);
   });
@@ -45,6 +50,23 @@ describe("App", () => {
       screen.getByText("fuel-tank-789");
       screen.getByText("ralph-lauren-123");
       screen.getByText("versace-789");
+    });
+  });
+
+  it("can calculate radiation for a variant", async () => {
+    render(<App />);
+    await waitFor(async () => {
+      // screen.getByText("nose-cone-123");
+      const variantItem = screen.getByTestId("nose-cone-123-variant");
+
+      const radiationButton =
+        within(variantItem).getByTestId("radiation-button");
+
+      fireEvent.press(radiationButton);
+
+      await waitFor(() => {
+        within(variantItem).getByText("Radiation: 40");
+      });
     });
   });
 
