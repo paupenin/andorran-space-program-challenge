@@ -12,9 +12,9 @@ Our "WDIPI", *Where Did I Put It*, department is working on an Asset Inventory M
 
 Somehow our inventory got corrupted and some of our items not just disappeared but also went negative.
 
-The burocrats of the Andorran Space Program decided that from now on item variants wihout quantity should not appear.
+The bureaucrats of the Andorran Space Program decided that from now on item variants wihout quantity should not appear.
 
-Unfourtanetly we cannot modify data in the production database because the paper where we have written the password got eaten by a cow.
+Unfortunately we cannot modify data in the production database because the paper where we have written the password got eaten by a cow.
 
 **Radiation Shielding**
 
@@ -24,7 +24,7 @@ This new material is still in development and has three categories: Level 1, Lev
 
 All new products that have Andorranium must store the Radiation Shielding. All products without Andorranium should be considered as a Level 0 radiation shielding.
 
-If the mixture has more tobacco than alcohol the Radiation Shielding must be Level 1, if they add more alcohol than tobacco must be Level 3, and if they are equal Level 1.
+If the mixture has more tobacco than alcohol the Radiation Shielding must be Level 1, if they add more alcohol than tobacco must be Level 3, and if they are equal Level 2.
 
 ## Challenge Objectives:
 
@@ -46,7 +46,7 @@ If the mixture has more tobacco than alcohol the Radiation Shielding must be Lev
 From now on, items with zero or negative `quantity` doesn't exists.
 
 1. They should not be returned in `GET /inventory` or `GET /inventory/:id`.
-2. Prevent adding new ones if zero or negative. When updating delete if zero or negative. Se still must allow to import negative quantities to remove items.
+2. Prevent adding new ones if zero or negative. When updating delete if zero or negative. We must still allow the import of negative quantities to remove items.
 3. When removing variants delete the variant for zero or negative quantities.
 
 **Radiation Shielding**
