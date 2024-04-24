@@ -1,4 +1,4 @@
-package com.app
+package org.example
 
 class MainApplication {
     // Pretend this is a React Native application
