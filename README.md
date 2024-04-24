@@ -4,6 +4,8 @@ In a whimsical alternate reality, Andorra, known for its beautiful ski slopes an
 
 The mission: explore the cosmos to find new ski destinations and promote interstellar tourism.
 
+Our "WDIPI", *Where Did I Put It*, department is working on an Asset Inventory Management software to track space gear, luckly we have a magical warehouse which fits the entire universe on it so we don't have to worry about it.
+
 ## Challenge Overview:
 
 **Negative numbers**
@@ -12,15 +14,17 @@ Somehow our inventory got corrupted and some of our items not just disappeared b
 
 The burocrats of the Andorran Space Program decided that from now on item variants wihout quantity should not appear.
 
-Unfourtanetly we cannot modify data in the production database because the password got lost.
+Unfourtanetly we cannot modify data in the production database because the paper where we have written the password got eaten by a cow.
 
 **Radiation Shielding**
 
-We developed a new material called "Andorranium" made with dried tobacco leaves, cheap alcohol, and Youtubers, it provides Space radiation protection allowing our materials to last longer in space.
+We developed a new material called "Andorranium" made with dried tobacco leaves and cheap alcohol, it provides Space radiation protection allowing our space gear to last longer in space.
 
-This new material is still in development and it's values can be 1, 2 or 3 depending if Youtuber's car is a Porsche (1), Ferrari (2), or Lamborgini (3).
+This new material is still in development and has three categories: Level 1, Level 2 and Level 3 depending on the materials mixture.
 
-All new products that uses Andorranium can have a `radiationShielding` value. All products without Andorranium should be considered with a radiation shielding of 0.
+All new products that have Andorranium must store the Radiation Shielding. All products without Andorranium should be considered as a Level 0 radiation shielding.
+
+If the mixture has more tobacco than alcohol the Radiation Shielding must be Level 1, if they add more alcohol than tobacco must be Level 3, and if they are equal Level 1.
 
 ## Challenge Objectives:
 
@@ -30,7 +34,7 @@ All new products that uses Andorranium can have a `radiationShielding` value. Al
 
 ## Rules:
 
-- Do not modify Database data or connector (don't change `db.ts`).
+- Do not modify Database data or connector, don't change `db.ts`.
 - All tests must pass, existing tests must not be changed.
 - Finish all items before doing BONUS.
 
@@ -57,9 +61,14 @@ We have to accept Radiation Shielding for our variants.
 
 ### APP
 
+**Negative numbers**
+
+1. We want a quick button to remove a variant, add a button "Remove all quantity" to remove a variant for each of the variants.
+
 **Radiation Shielding**
 
-1. Add an input called "Youtuber's car". If the user introduces: `porsche`, `ferrari`, or `lamborgini` add `radiationShielding` as a number to the update request.
+1. Add 2 inputs called "Tobacco amount" and "Alcohol amount". This fields are optional but only if both are present we have to add the Radiation Shielding.
+2. Add the proper Radiation Shielding for Variants using Andorranium.
 
 **BONUS**
 
